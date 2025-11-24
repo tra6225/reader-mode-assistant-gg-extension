@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reader Mode</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  
+  <div class="header-card">
+    <div class="header-top">
+      <h1>Reader Mode</h1>
+      <div class="toggle-wrapper">
+        <label class="switch">
+          <input type="checkbox" id="extensionToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <p id="statusText" class="status">Active</p>
+  </div>
+
+  <div class="container">
+    
+    <div class="control-card">
+      <label class="card-label">Page Theme</label>
+      <div class="theme-buttons">
+        <button class="theme-btn original selected" data-value="original" title="Original">Aa</button>
+        <button class="theme-btn yellowish" data-value="yellow" title="Yellowish">Aa</button>
+        <button class="theme-btn dark" data-value="dark" title="Dark Mode">Aa</button>
+      </div>
+      <select id="themeSelect" style="display:none">
+        <option value="original">Original</option>
+        <option value="yellow">Yellowish</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
+
+    <div class="control-card">
+      <label class="card-label">Text Size</label>
+      <div class="size-controls">
+        <button id="btnDecrease" class="icon-btn">A-</button>
+        <button id="btnReset" class="text-btn">Reset</button>
+        <button id="btnIncrease" class="icon-btn">A+</button>
+      </div>
+    </div>
+
+    <div class="control-card">
+      <div class="row">
+        <label class="card-label">Font Style</label>
+        <select id="fontSelect" class="styled-select">
+          <option value="original">Default</option>
+          <option value="sans">Arial</option>
+          <option value="serif">Georgia</option>
+          <option value="comic">Dyslexic (Comic)</option>
+          <option value="minecraft">Minecraft</option>
+        </select>
+      </div>
+      <hr class="divider">
+      <div class="row">
+        <label class="card-label">Progress Bar</label>
+        <label class="switch small-switch">
+          <input type="checkbox" id="progressToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

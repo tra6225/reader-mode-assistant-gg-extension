@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Reader Mode Assistant",
+  "version": "6.25",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+/* minecraft font yayy */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* badge popup settings */
+#reading-time-badge {
+  position: fixed;
+  top: 20px; right: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #7e50ac 100%);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 50px;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  z-index: 2147483647;
+  transition: transform 0.2s;
+}
+
+/* progress bar settings */
+#reading-progress-bar {
+  position: fixed; top: 0; left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #7b4ea9);
+  width: 0%;
+  z-index: 2147483647;
+  transition: width 0.1s;
+}
+
+/* thimi color settings, need to override pages' setup */
+.theme-yellow, .theme-yellow * {
+  background-color: #fdf6e3 !important; 
+  color: #586e75 !important;
+  border-color: #eee8d5 !important;
+}
+.theme-yellow img { background-color: transparent !important; }
+.theme-dark, .theme-dark * {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+  border-color: #333 !important;
+}
+.theme-dark a { color: #667eea !important; } 
+.theme-dark img { 
+  background-color: transparent !important; 
+  opacity: 0.9; 
+}
+
+/* fonts settings, need to override pages' setup */
+.font-sans * { 
+  font-family: Arial, Helvetica, sans-serif !important; 
+  line-height: 1.6 !important; 
+}
+.font-serif * { 
+  font-family: Georgia, serif !important; 
+  line-height: 1.6 !important; 
+}
+.font-comic * { 
+  font-family: 'Comic Sans MS', sans-serif !important; 
+  line-height: 1.8 !important; 
+}
+.font-minecraft * { 
+  font-family: 'VT323', monospace !important; 
+  letter-spacing: 0.5px !important;
+}
+body.font-minecraft {
+  font-size: 120% !important; 
+}
+
+/* badge and progression bar on top */
+body.theme-yellow #reading-progress-bar,
+body.theme-dark #reading-progress-bar {
+  background: linear-gradient(90deg, #667eea, #764ba2) !important;
+}
+body.theme-yellow #reading-time-badge,
+body.theme-dark #reading-time-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}

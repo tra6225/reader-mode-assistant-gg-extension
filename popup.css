@@ -1,0 +1,198 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --card-bg: #ffffff;
+  --text-main: #2d3748;
+  --text-muted: #718096;
+  --bg-color: #f7fafc;
+}
+
+body {
+  width: 280px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+/* header of controller settings */
+.header-card {
+  background: var(--primary-gradient);
+  padding: 20px;
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  margin-bottom: 15px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 { 
+  margin: 0; 
+  font-size: 20px; 
+  font-weight: 700; 
+  letter-spacing: 0.5px; 
+}
+
+.status { 
+  margin: 5px 0 0 0; 
+  font-size: 12px; 
+  opacity: 0.9; 
+  font-weight: 500; 
+}
+
+/* body of controller settings */
+.container { 
+  padding: 0 15px 15px 15px; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 12px; }
+
+.control-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 12px 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.card-label { 
+  font-size: 12px; 
+  font-weight: 700; 
+  color: var(--text-muted); 
+  text-transform: uppercase; 
+  display: block; 
+  margin-bottom: 8px; }
+
+/* color theme buttons */
+.theme-buttons { display: flex; gap: 8px; }
+.theme-btn {
+  flex: 1;
+  height: 40px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: transform 0.1s;
+}
+.theme-btn:hover { transform: translateY(-2px); }
+.theme-btn.selected { 
+  border-color: #764ba2; 
+  box-shadow: 0 0 0 2px rgba(118, 75, 162, 0.2); 
+}
+
+/* theme button visual */
+.theme-btn.original { 
+  background: #ffffff; 
+  color: #333; 
+  border: 1px solid #eee; 
+}
+
+.theme-btn.yellowish { 
+  background: #fdf6e3; 
+  color: #5f5a4e; 
+}
+
+.theme-btn.dark { 
+  background: #2d2d2d; 
+  color: #ddd; }
+
+/* resize button settings */
+.size-controls { 
+  display: flex; 
+  background: #edf2f7; 
+  border-radius: 8px; 
+  padding: 4px; }
+
+.icon-btn, .text-btn {
+  flex: 1; 
+  border: none; 
+  background: transparent; 
+  cursor: pointer; 
+  color: var(--text-main); 
+  font-weight: 600; 
+  padding: 6px; 
+  border-radius: 6px;
+}
+
+.icon-btn:hover, .text-btn:hover { 
+  background: #fff; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+
+/* dropdowns settings */
+.row { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 0; 
+}
+
+.row .card-label { margin-bottom: 0; }
+
+.styled-select {
+  border: none; 
+  background: #edf2f7; 
+  padding: 5px 10px; 
+  border-radius: 6px; 
+  font-size: 13px; 
+  color: var(--text-main); 
+  cursor: pointer; 
+  outline: none;
+}
+
+.divider { 
+  border: 0; 
+  border-top: 1px solid #eee; 
+  margin: 10px 0; 
+}
+
+/* toggle switches settings */
+.switch { 
+  position: relative; 
+  display: inline-block; 
+  width: 44px; 
+  height: 24px; 
+}
+
+.switch input { 
+  opacity: 0; 
+  width: 0; 
+  height: 0; 
+}
+
+.slider { 
+  position: absolute; 
+  cursor: pointer; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background-color: rgba(255,255,255,0.3); 
+  transition: .4s; 
+  border-radius: 24px; 
+}
+
+.slider:before { 
+  position: absolute; 
+  content: ""; height: 18px; 
+  width: 18px; left: 3px; 
+  bottom: 3px; 
+  background-color: white; 
+  transition: .4s; 
+  border-radius: 50%; 
+}
+
+input:checked + .slider { background-color: rgba(255,255,255,0.9); }
+input:checked + .slider:before { transform: translateX(20px); background-color: #764ba2; }
+
+.small-switch { width: 36px; height: 20px; }
+.small-switch .slider { background-color: #cbd5e0; }
+.small-switch .slider:before { height: 14px; width: 14px; bottom: 3px; left: 3px; }
+.small-switch input:checked + .slider { background-color: #667eea; }
+.small-switch input:checked + .slider:before { background-color: white; transform: translateX(16px); }
